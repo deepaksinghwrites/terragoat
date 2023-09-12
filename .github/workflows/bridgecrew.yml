@@ -18,7 +18,7 @@ jobs:
       id: workshop-codesecurity
       uses: bridgecrewio/bridgecrew-action@master
       env:
-        PRISMA_API_URL: https://api2.prismacloud.io
+        PRISMA_API_URL: https://app2.prismacloud.io
       with:
         api-key: ${{ secrets.BC_API_KEY }}
         directory: terraform/
