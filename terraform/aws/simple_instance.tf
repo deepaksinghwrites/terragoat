@@ -1,11 +1,11 @@
 terraform {
 
 
- required_providers {
-   aws = {
-     source = "hashicorp/aws"
-   }
- }
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+    }
+  }
 }
 
 provider "aws" {
@@ -16,27 +16,29 @@ data "aws_caller_identity" "current" {}
 
 
 locals {
- account_id = data.aws_caller_identity.current.account_id
+  account_id = data.aws_caller_identity.current.account_id
 }
 
 
 output "account_id" {
- value = local.account_id
+  value = local.account_id
 }
 
 
 resource "random_id" "rando" {
- byte_length = 8
+  byte_length = 8
 }
 
 
 resource "aws_s3_bucket" "dockingbaywithdeepak" {
- bucket = "${local.account_id}-my-s3-bucket-${random_id.rando.hex}"
+  bucket = "${local.account_id}-my-s3-bucket-${random_id.rando.hex}"
 
 
- tags = {
-   Name        = "Docking Bay w deepak"
-   Environment = "Dev"
- }
+  tags = {
+    Name        = "Docking Bay w deepak"
+    Environment = "Dev"
+    yor_name    = "dockingbaywithdeepak"
+    yor_trace   = "4bfbf26a-d3c9-45f7-a0de-5ba17ac3ee5e"
+  }
 }
 
