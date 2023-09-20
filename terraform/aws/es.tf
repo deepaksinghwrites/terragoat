@@ -25,6 +25,12 @@ resource "aws_elasticsearch_domain" "monitoring-framework" {
     yor_trace            = "95131dec-d7c9-49bb-9aff-eb0e2736603b"
     yor_name             = "monitoring-framework"
   }
+  log_publishing_options {
+    cloudwatch_log_group_arn = "CKV_ANY"
+  }
+  encrypt_at_rest {
+    enabled = true
+  }
 }
 
 data aws_iam_policy_document "policy" {

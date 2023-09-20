@@ -31,6 +31,7 @@ EOF
     }, {
     yor_name = "web_host"
   })
+  monitoring = true
 }
 
 resource "aws_ebs_volume" "web_host_storage" {
@@ -52,6 +53,7 @@ resource "aws_ebs_volume" "web_host_storage" {
     }, {
     yor_name = "web_host_storage"
   })
+  encrypted = true
 }
 
 resource "aws_ebs_snapshot" "example_snapshot" {
