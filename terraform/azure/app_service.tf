@@ -42,7 +42,7 @@ resource azurerm_app_service "app-service1" {
   }
   logs {
     detailed_error_messages_enabled = true
-    failed_request_tracing_enabled = true
+    failed_request_tracing_enabled  = true
   }
 }
 
@@ -69,7 +69,7 @@ resource azurerm_app_service "app-service2" {
   }
   logs {
     detailed_error_messages_enabled = true
-    failed_request_tracing_enabled = true
+    failed_request_tracing_enabled  = true
   }
 }
 
