@@ -13,6 +13,8 @@ resource "aws_kms_key" "logs_key" {
     git_repo             = "terragoat"
     yor_trace            = "cd8fa2a7-4868-4cd1-993d-da4644808ce5"
     yor_name             = "logs_key"
+    owner                = "pritesh"
+    user                 = "pchandaliya"
   }
 }
 
