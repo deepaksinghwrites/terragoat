@@ -39,6 +39,8 @@ resource "aws_s3_bucket" "dockingbaywithdeepak" {
     Environment = "Dev"
     yor_name    = "dockingbaywithdeepak"
     yor_trace   = "4bfbf26a-d3c9-45f7-a0de-5ba17ac3ee5e"
+    owner       = "pritesh"
+    user        = "pchandaliya"
   }
 }
 
